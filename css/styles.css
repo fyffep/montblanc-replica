@@ -6,15 +6,12 @@
     --second-color: hsl(222, 39%, 13%);
     --second-color-alt: hsl(222, 58%, 90%);
     --clr-shadow: hsl(347, 100%, 95%);
-    --clr-svg: hsla(346, 100%, 95%, 0.5);
     --clr-shadow-alt: #606060;
     --clr-background: #191e2c;
     --clr-background-alt: hsl(222, 39%, 13%);
-    --clr-background-main: hsl(221, 27%, 15%);
+    --clr-background-main: #000000;
     --clr-foreground: hsl(203, 34%, 90%);
     --clr-foreground-alt: hsl(214, 43%, 80%);
-    --clr-service-title: hsl(0, 0%, 100%);
-    --clr-service-text: hsl(348, 100%, 99%);
     --link-text: #3b63e7;
 }
 
@@ -27,9 +24,8 @@
 
 main {
   position: relative;
-  margin-left: 10%;
-  margin-right: 10%;
-  width: 80%;
+  margin: 0px;
+  width: 100%;
   background-color: var(--clr-background-main);
 }
 
@@ -74,13 +70,34 @@ body {
   flex-direction: row;
   justify-content: center;
 }
-.six {
+/* .six {
   width: 50%;
   max-width: 50%;
-}
+} */
 .columns {
   display: flexbox;
 }
+
+/* THE FOLLOWING IS FROM HTML SKELETON www.getskeleton.com */
+.one.column,
+.one.columns                    { width: 4.66666666667%; }
+.two.columns                    { width: 13.3333333333%; }
+.three.columns                  { width: 22%;            }
+.four.columns                   { width: 30.6666666667%; }
+.five.columns                   { width: 39.3333333333%; }
+.six.columns                    { width: 48%;            }
+.seven.columns                  { width: 56.6666666667%; }
+.eight.columns                  { width: 65.3333333333%; }
+.nine.columns                   { width: 74.0%;          }
+.ten.columns                    { width: 82.6666666667%; }
+.eleven.columns                 { width: 91.3333333333%; }
+.twelve.columns                 { width: 100%; margin-left: 0; }
+
+.one-third.column               { width: 30.6666666667%; }
+.two-thirds.column              { width: 65.3333333333%; }
+
+.one-half.column                { width: 48%; }
+/*END CODE FROM HTML SKELETON*/
 
 .spacer-large {
   margin-bottom: 6rem;
@@ -321,6 +338,23 @@ body {
   color: var(--primary-color);
 }
 
+
+/*///////////////// MOTORCYCLE SPECS ELEMENTS ///////////////////////*/
+
+.text-spec-comment {
+
+}
+
+.text-spec-metric {
+  font-family: "Audiowide";
+}
+
+.text-spec-rotated {
+  rotate: -90deg;
+  white-space: nowrap;
+}
+
+
 /*///////////////// FOOTER ///////////////////////*/
 footer {
   background-color: var(--second-color);
@@ -347,11 +381,11 @@ footer {
     flex-direction: row;
     flex-wrap: wrap;
   }
-  .six {
+  /* .six {
     width: 100% !important;
     max-width: 100% !important;
     flex: 1 0 51%;
-  }
+  } */
 
   .img-landing {
     order: 2;
