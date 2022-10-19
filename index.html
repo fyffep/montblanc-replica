@@ -39,7 +39,10 @@
   <main>
 
     <div class="row">
-      <img src="images/photo 1.png" alt="Side view of Montblanc bike" class="seven columns" />
+      <div class="seven columns">
+        <img src="images/photo 1.png" alt="Side view of Montblanc bike" class="img-slide" />
+        <img src="images/photo 1 - reversed.png" alt="Reversed side view of Montblanc bike" class="img-slide" />
+      </div>
       <img src="images/photo 2.png" alt="Front view of bike headlight" class="two columns" />
       <div class="three columns">
         <div class="row div-spec">
@@ -63,10 +66,14 @@
 
     
     <div class="row">
-      <div class="four columns">
-        <div id="progress-bar-background">
-          <div id="progress-bar-fill"></div>
+      <div class="four columns row" id="row-progress-bar">
+        <button id="btn-plus-slide" class="column" onclick="plusSlides(-1)">« 1</button>
+        <div class="eight columns">
+          <div id="progress-bar-background">
+            <div id="progress-bar-fill"></div>
+          </div>
         </div>
+        <button class="column" onclick="plusSlides(1)">10 »</button>
       </div>
       <div class="three columns" style="font-size: 14px;">
           The bike comes in all black, with a relatively modern appeal. Chrome accents in just the right places make the bike stand out, while the black-on-black satin text on the bike's fork-guards helps highlight the company's branding without being too direct or obvious.
@@ -154,5 +161,6 @@
       </div>
     </footer>
 </body>
-<script src="scripts/progress-bar.js"></script>
+<!-- <script src="scripts/progress-bar.js"></script> -->
+<script src="scripts/slideshow.js"></script>
 </html>

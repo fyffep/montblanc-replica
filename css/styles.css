@@ -105,6 +105,7 @@ body {
   .two-thirds.column              { width: 66.3333333333%; }
 
   .one-half.column                { width: 50%; }
+  .half.column                    { width: 4.16666666666%; }
 }
 /*END CODE FROM HTML SKELETON*/
 
@@ -352,6 +353,7 @@ body {
 
 #progress-bar-background {
   width: 100%;
+  min-width: 100px;
   background-color: var(--clr-background);
 }
 
@@ -361,6 +363,32 @@ body {
   background-color: var(--progress-bar-fill);
 }
 
+#row-progress-bar {
+  justify-content: space-around;
+}
+
+#row-progress-bar button {
+  white-space: nowrap;
+  width: 3em;
+  background-color: #00000000;
+  border: none;
+  color: var(--clr-foreground-alt);
+  border-radius: 4px;
+}
+#row-progress-bar button:hover {
+  background-color: var(--clr-background);
+  color: var(--clr-foreground);
+  transition: 300ms;
+}
+
+/*///////////////// SLIDESHOW ///////////////////////*/
+
+.slide-root:nth-child(1) {
+  display: none;
+}
+/* .slide-root:first-child {
+  display: block;
+} */
 
 /*///////////////// FOOTER ///////////////////////*/
 footer {
