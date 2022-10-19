@@ -13,6 +13,7 @@
     --clr-foreground: hsl(203, 34%, 90%);
     --clr-foreground-alt: hsl(214, 43%, 80%);
     --link-text: #3b63e7;
+    --progress-bar-fill: #A75B12;
 }
 
 /*///////////////// HTML TAGS ///////////////////////*/
@@ -79,25 +80,38 @@ body {
 }
 
 /* THE FOLLOWING IS FROM HTML SKELETON www.getskeleton.com */
-.one.column,
-.one.columns                    { width: 4.66666666667%; }
-.two.columns                    { width: 13.3333333333%; }
-.three.columns                  { width: 22%;            }
-.four.columns                   { width: 30.6666666667%; }
-.five.columns                   { width: 39.3333333333%; }
-.six.columns                    { width: 48%;            }
-.seven.columns                  { width: 56.6666666667%; }
-.eight.columns                  { width: 65.3333333333%; }
-.nine.columns                   { width: 74.0%;          }
-.ten.columns                    { width: 82.6666666667%; }
-.eleven.columns                 { width: 91.3333333333%; }
-.twelve.columns                 { width: 100%; margin-left: 0; }
+@media (min-width: 550px) {
+  /* .container {
+    width: 80%; }
+  .column:first-child,
+  .columns:first-child {
+    margin-left: 0; } */
 
-.one-third.column               { width: 30.6666666667%; }
-.two-thirds.column              { width: 65.3333333333%; }
+  .one.column,
+  .one.columns                    { width: 8.3333333333%; }
+  .two.columns                    { width: 16.6666666666%; }
+  .three.columns                  { width: 25%;            }
+  .four.columns                   { width: 33.3333333333%; }
+  .five.columns                   { width: 41.6666666666%; }
+  .six.columns                    { width: 48%;            }
+  .seven.columns                  { width: 58.3333333333%; }
+  .eight.columns                  { width: 66.6666666666%; }
+  .nine.columns                   { width: 75.0%;          }
+  .ten.columns                    { width: 83.3333333333%; }
+  .eleven.columns                 { width: 91.6666666666%; }
+  .twelve.columns                 { width: 100%; margin-left: 0; }
 
-.one-half.column                { width: 48%; }
+  .one-third.column               { width: 33.6666666667%; }
+  .two-thirds.column              { width: 66.3333333333%; }
+
+  .one-half.column                { width: 50%; }
+}
 /*END CODE FROM HTML SKELETON*/
+
+.w-100 {
+  width: 100%;
+  margin: 0px;
+}
 
 .spacer-large {
   margin-bottom: 6rem;
@@ -172,35 +186,6 @@ body {
 }
 .nav__item a:hover::before {
   transform: scale(1);
-}
-
-.button-landing-page {
-  width: 50% !important;
-  height: auto !important;
-  font-size: 24px !important;
-  font-family: "Titillium Web" !important;
-  border-radius: 18px !important;
-  border: none !important;
-}
-
-.img-landing {
-  order: 1;
-  max-height: 18rem;
-  max-width: 18rem;
-  border: 10px solid var(--primary-color);
-  border-radius: 100%;
-}
-.title-landing {
-  order: 2;
-  padding-left: 10%;
-  padding-right: 10%;
-  width: auto;
-}
-.h1-landing {
-  font-size: 2.5rem;
-}
-.h2-landing {
-  font-size: 2rem;
 }
 
 /*///////////////// MAIN ELEMENTS ///////////////////////*/
@@ -341,17 +326,39 @@ body {
 
 /*///////////////// MOTORCYCLE SPECS ELEMENTS ///////////////////////*/
 
-.text-spec-comment {
+.div-spec  {
+  justify-content: flex-start;
+  padding: 0px !important;
+}
 
+.text-spec-comment {
+  font-size: 12px;
 }
 
 .text-spec-metric {
   font-family: "Audiowide";
+  font-size: 28px;
+  color: white;
 }
 
 .text-spec-rotated {
   rotate: -90deg;
   white-space: nowrap;
+  color: #555555;
+  font-size: 16px;
+}
+
+/*///////////////// PROGRESS BAR ///////////////////////*/
+
+#progress-bar-background {
+  width: 100%;
+  background-color: var(--clr-background);
+}
+
+#progress-bar-fill {
+  width: 1%;
+  height: 10px;
+  background-color: var(--progress-bar-fill);
 }
 
 
@@ -380,35 +387,6 @@ footer {
     align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
-  }
-  /* .six {
-    width: 100% !important;
-    max-width: 100% !important;
-    flex: 1 0 51%;
-  } */
-
-  .img-landing {
-    order: 2;
-    height: 20% !important;
-    max-height: 20% !important;
-    margin: 10%;
-  }
-  .title-landing {
-    margin-top: 1rem;
-    order: 1;
-    text-align: center;
-  }
-
-  .list-duo-column {
-    padding-top: 5%;
-    padding-bottom: 5%;
-    padding-left: 10%;
-    padding-right: 10%;
-  }
-
-  .padded-20 {
-    margin-left: 10%;
-    margin-right: 10%;
   }
 
   #header {

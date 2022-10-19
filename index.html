@@ -39,27 +39,44 @@
   <main>
 
     <div class="row">
-      <img src="images/photo 1.png" alt="Montblanc motorcycle" class="seven columns" />
-      <img src="images/photo 2.png" alt="Montblanc motorcycle" class="three columns" />
-      <div class="two columns">
-        <div class="row">
-          <p class="text-spec-rotated">TOP SPEED</p>
-          <div>
-            <p>6-SPEED CONSTANT MESH</p>
+      <img src="images/photo 1.png" alt="Side view of Montblanc bike" class="seven columns" />
+      <img src="images/photo 2.png" alt="Front view of bike headlight" class="two columns" />
+      <div class="three columns">
+        <div class="row div-spec">
+          <span class="text-spec-rotated column">TOP SPEED</span>
+          <div class="column">
+            <p class="text-spec-comment">6-SPEED CONSTANT MESH</p>
             <p class="text-spec-metric">169 MPH</p>
-            <p>272 KM/H</p>
+            <p class="text-spec-comment">272 KM/H</p>
           </div>
         </div>
-        <div>
-          <p>6-SPEED CONSTANT MESH</p>
-          <p class="text-spec-metric">169 MPH</p>
-          <p>272 KM/H</p>
+        <div class="row div-spec">
+          <span class="text-spec-rotated column">POWER</span>
+          <div class="column">
+            <p class="text-spec-comment">121 KW</p>
+            <p class="text-spec-metric">162 HP</p>
+            <p class="text-spec-comment">2250 RPM</p>
+          </div>
         </div>
-        <div class="row">Hello2</div>
-        <div class="row">Hello3</div>
       </div>
     </div>
 
+    
+    <div class="row">
+      <div class="four columns">
+        <div id="progress-bar-background">
+          <div id="progress-bar-fill"></div>
+        </div>
+      </div>
+      <div class="three columns" style="font-size: 14px;">
+          The bike comes in all black, with a relatively modern appeal. Chrome accents in just the right places make the bike stand out, while the black-on-black satin text on the bike's fork-guards helps highlight the company's branding without being too direct or obvious.
+      </div>
+      <img src="images/photo 3.png" alt="Wheel guard" class="two columns" />
+      <div class="three columns">
+        
+      </div>
+    </div>
+    <button onclick="move()">Increase progress</button>
 
 
 
@@ -137,4 +154,5 @@
       </div>
     </footer>
 </body>
+<script src="scripts/progress-bar.js"></script>
 </html>
