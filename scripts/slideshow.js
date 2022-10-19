@@ -26,7 +26,8 @@ increaseProgress();
 
 // Next/previous controls
 function plusSlides(n) {
-  showSlides(slideIndex += n);
+  slideIndex += n;
+  showSlides(slideIndex);
 }
 
 function showSlides(n) {
