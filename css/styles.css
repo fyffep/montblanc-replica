@@ -330,6 +330,7 @@ body {
 .row-spec  {
   justify-content: stretch;
   align-items: center;
+  height: 6em;
 }
 
 .text-spec-comment {
@@ -348,17 +349,20 @@ body {
   color: #555555;
   font-size: 16px;
 
-  transform: rotate(-90deg) translateX(-100%);
+  transform: rotate(-90deg) translateX(-75%);
   transform-origin: top left;
   top: 0%;
   bottom: 0;
-  width: 2.5em;
+  float: left;
+  width: auto;
 }
 
 .container-spec {
   /* transform: translateX(calc(-50% + 0.5em)); */
   padding-top: 0.5em;
   padding-bottom: 0.5em;
+  position: absolute;
+  padding-left: 2em;
 }
 
 /*///////////////// PROGRESS BAR ///////////////////////*/
