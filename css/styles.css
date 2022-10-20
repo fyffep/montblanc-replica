@@ -440,11 +440,11 @@ footer {
     flex-wrap: wrap;
   }
 
-  
 
   #img-japanese {
     width: 100%;
-    margin-bottom: 1em;
+    margin-bottom: 2em;
+    margin-top: -1em;
   }
 
   #img-circular-text {
@@ -455,6 +455,13 @@ footer {
     right: 0px;
     position: absolute;
     animation: spin 30s linear infinite;
+  }
+
+  #img-headlight {
+    width: 75%;
+    order: 3;
+    margin-top: -1em;
+    margin-bottom: -1em;
   }
 }
 
@@ -490,9 +497,10 @@ footer {
     transform: scale(1);
   }
   .nav__item a {
-    color: var(--clr-foreground-alt);
+    color: var(--clr-foreground);
     margin: 0;
     font-size: 1.2rem;
+    background-color: transparent;
   }
   .nav__item a::before {
     background-color: var(--clr-foreground);
