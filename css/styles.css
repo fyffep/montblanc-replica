@@ -173,11 +173,11 @@ body {
 
 #header {
   padding: 1rem 2rem;
-  background-color: var(--clr-background-alt);
+  background-color: var(--clr-background-main);
   color: var(--clr-foreground-alt);
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   position: relative;
   font-weight: 400;
 }
@@ -185,6 +185,7 @@ body {
   display: flex;
   align-items: center;
   list-style: none;
+  padding-left: 2em;
 }
 .open_close_menu__container {
   display: none;
@@ -215,8 +216,23 @@ body {
   margin: 0 1.5rem;
   letter-spacing: 0.2rem;
   position: relative;
-  font-size: 1.4rem;
+  font-size: 0.8rem;
   text-align: center;
+  font-family: "Audiowide";
+  z-index: 3 !important;
+  background-color: var(--clr-background-main);
+  padding: 2px;
+  border-radius: 5px;
+}
+.nav__item a::before {
+  content: "";
+  background-color: var(--primary-color);
+  width: 100%;
+  height: 0.1rem;
+  position: absolute;
+  bottom: 0;
+  transform: scale(0);
+  transition: transform 200ms ease-in-out;
 }
 .nav__item a:hover::before {
   transform: scale(1);
@@ -258,79 +274,6 @@ body {
 }
 .hr-20 {
   width: 20%;
-}
-
-.p-article {
-  margin-top: 0.5rem;
-  text-align: justify;
-  width: 80%;
-}
-.ul-article {
-  margin-top: 0.5rem;
-  width: 80%;
-}
-.ul-subheader {
-  margin-top: 0.5rem;
-}
-.ul-tech {
-  margin-top: 0.5rem;
-  width: 80%;
-  list-style: none;
-}
-.ul-tech li i {
-  font-size: 1rem;
-  margin-right: 0.5rem;
-  cursor: default;
-}
-
-.padded {
-  margin-left: 10%;
-  margin-right: 10%;
-}
-
-/*/// Custom Padding ///*/
-.padded-half {
-  margin-left: 5%;
-  margin-right: 5%;
-}
-
-.padded-20 {
-  margin-left: 20%;
-  margin-right: 20%;
-}
-
-.padded-left {
-  margin-left: 10%;
-}
-
-.padded-half-left {
-  margin-left: 5%;
-}
-
-/*/// Image Cards ///*/
-.div-card {
-  min-height: 9rem;
-}
-.a-card {
-  border-radius: 10px;
-  margin: 1rem;
-  padding: 0.5rem;
-  width: 100%;
-  height: 9rem;
-}
-.img-card {
-  height: auto;
-  max-height: 100%;
-  width: auto;
-  max-width: 100%;
-}
-
-.thin-border {
-  border: 2px solid var(--primary-color);
-  border-radius: 30px;
-}
-.shadowed {
-  box-shadow: 4px 4px 5px var(--clr-shadow-alt);
 }
 
 /*/// Links ///*/
@@ -387,7 +330,6 @@ body {
 }
 
 .container-spec {
-  /* transform: translateX(calc(-50% + 0.5em)); */
   padding-top: 0.5em;
   padding-bottom: 0.5em;
   position: absolute;
@@ -449,7 +391,7 @@ body {
   top: 2em;
   left: calc(46%);
   position: absolute;
-  animation: spin 30s linear infinite;
+  animation: spin 60s linear infinite;
 }
 
 @keyframes spin {
@@ -459,6 +401,15 @@ body {
   100% {
     transform: rotate(360deg);
   }
+}
+
+#img-gold {
+  position: absolute;
+  width: 25vw;
+  right: 0;
+  top: 0;
+  z-index: 1;
+  object-position: 5vw 0;
 }
 
 /*///////////////// FOOTER ///////////////////////*/
@@ -478,7 +429,7 @@ footer {
 }
 
 /*///////////////// MOBILE-SPECIFIC STYLES ///////////////////////*/
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 481px) {
   .desktop-only {
     display: none !important;
   }
@@ -489,8 +440,34 @@ footer {
     flex-wrap: wrap;
   }
 
+  
+
+  #img-japanese {
+    width: 100%;
+    margin-bottom: 1em;
+  }
+
+  #img-circular-text {
+    height: 3%;
+    width: auto;
+    top: 2em;
+    left: 75%;
+    right: 0px;
+    position: absolute;
+    animation: spin 30s linear infinite;
+  }
+}
+
+/*///////////////// NAVBAR COLLAPSE ///////////////////////*/
+/* Small screens (small laptops, tablets, and phones) should collapse */
+@media screen and (max-width: 869px) {
+  .desktop-only {
+    display: none !important;
+  }
+
   #header {
     padding: 1rem;
+    justify-content: space-between;
   }
 
   .nav__items {
@@ -515,7 +492,7 @@ footer {
   .nav__item a {
     color: var(--clr-foreground-alt);
     margin: 0;
-    font-size: 1.9rem;
+    font-size: 1.2rem;
   }
   .nav__item a::before {
     background-color: var(--clr-foreground);
@@ -529,24 +506,10 @@ footer {
   .open_close_menu__container {
     display: block;
   }
-
-  #img-japanese {
-    width: 100%;
-    margin-bottom: 1em;
-  }
-
-  #img-circular-text {
-    height: 3%;
-    width: auto;
-    top: 2em;
-    left: 75%;
-    right: 0px;
-    position: absolute;
-    animation: spin 30s linear infinite;
-  }
 }
 
-@media screen and (min-width: 769px) {
+/*///////////////// DESKTOP-SPECIFIC STYLES ///////////////////////*/
+@media screen and (min-width: 480px) {
   .mobile-only {
     display: none !important;
   }
