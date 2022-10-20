@@ -2,18 +2,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap");
 
 :root {
-    --primary-color: hsl(336, 70%, 95%);
-    --second-color: hsl(222, 39%, 13%);
-    --second-color-alt: hsl(222, 58%, 90%);
-    --clr-shadow: hsl(347, 100%, 95%);
-    --clr-shadow-alt: #606060;
-    --clr-background: #191e2c;
-    --clr-background-alt: hsl(222, 39%, 13%);
-    --clr-background-main: #000000;
-    --clr-foreground: hsl(203, 34%, 90%);
-    --clr-foreground-alt: hsl(214, 43%, 80%);
-    --link-text: #3b63e7;
-    --progress-bar-fill: #A75B12;
+  --primary-color: hsl(336, 70%, 95%);
+  --second-color: hsl(222, 39%, 13%);
+  --second-color-alt: hsl(222, 58%, 90%);
+  --clr-shadow: hsl(347, 100%, 95%);
+  --clr-shadow-alt: #606060;
+  --clr-background: #191e2c;
+  --clr-background-alt: hsl(222, 39%, 13%);
+  --clr-background-main: #000000;
+  --clr-foreground: hsl(203, 34%, 90%);
+  --clr-foreground-alt: hsl(214, 43%, 80%);
+  --link-text: #3b63e7;
+  --progress-bar-fill: #a75b12;
 }
 
 /*///////////////// HTML TAGS ///////////////////////*/
@@ -89,24 +89,57 @@ body {
     margin-left: 0; } */
 
   .one.column,
-  .one.columns                    { width: 8.3333333333%; }
-  .two.columns                    { width: 16.6666666666%; }
-  .three.columns                  { width: 25%;            }
-  .four.columns                   { width: 33.3333333333%; }
-  .five.columns                   { width: 41.6666666666%; }
-  .six.columns                    { width: 48%;            }
-  .seven.columns                  { width: 58.3333333333%; }
-  .eight.columns                  { width: 66.6666666666%; }
-  .nine.columns                   { width: 75.0%;          }
-  .ten.columns                    { width: 83.3333333333%; }
-  .eleven.columns                 { width: 91.6666666666%; }
-  .twelve.columns                 { width: 100%; margin-left: 0; }
+  .one.columns {
+    width: 8.3333333333%;
+  }
+  .two.columns {
+    width: 16.6666666666%;
+  }
+  .three.columns {
+    width: 25%;
+  }
+  .four.columns {
+    width: 33.3333333333%;
+  }
+  .five.columns {
+    width: 41.6666666666%;
+  }
+  .six.columns {
+    width: 48%;
+  }
+  .seven.columns {
+    width: 58.3333333333%;
+  }
+  .eight.columns {
+    width: 66.6666666666%;
+  }
+  .nine.columns {
+    width: 75%;
+  }
+  .ten.columns {
+    width: 83.3333333333%;
+  }
+  .eleven.columns {
+    width: 91.6666666666%;
+  }
+  .twelve.columns {
+    width: 100%;
+    margin-left: 0;
+  }
 
-  .one-third.column               { width: 33.6666666667%; }
-  .two-thirds.column              { width: 66.3333333333%; }
+  .one-third.column {
+    width: 33.6666666667%;
+  }
+  .two-thirds.column {
+    width: 66.3333333333%;
+  }
 
-  .one-half.column                { width: 50%; }
-  .half.column                    { width: 4.16666666666%; }
+  .one-half.column {
+    width: 50%;
+  }
+  .half.column {
+    width: 4.16666666666%;
+  }
 }
 /*END CODE FROM HTML SKELETON*/
 
@@ -136,7 +169,6 @@ body {
 #img-header-logo {
   height: 100%;
   width: auto;
-
 }
 
 #header {
@@ -192,7 +224,7 @@ body {
 
 /*///////////////// MAIN ELEMENTS ///////////////////////*/
 .bold {
-    font-weight: 700;
+  font-weight: 700;
 }
 .h1-standard {
   text-align: center;
@@ -325,10 +357,9 @@ body {
   color: var(--primary-color);
 }
 
-
 /*///////////////// MOTORCYCLE SPECS ELEMENTS ///////////////////////*/
 
-.row-spec  {
+.row-spec {
   justify-content: stretch;
   align-items: center;
   height: 6em;
@@ -379,6 +410,7 @@ body {
 
 #row-progress-bar {
   justify-content: space-around;
+  flex-wrap: nowrap;
 }
 
 #row-progress-bar button {
@@ -395,8 +427,12 @@ body {
   transition: 300ms;
 }
 
-/*///////////////// SLIDESHOW ///////////////////////*/
+#text-progress-bar-comment p {
+  font-size: 10pt;
+  padding: 1em;
+}
 
+/*///////////////// SLIDESHOW ///////////////////////*/
 
 /*///////////////// FLOATING IMAGES ///////////////////////*/
 
@@ -405,6 +441,24 @@ body {
   width: 100%;
   background: url("../images/VECTOR.png") repeat 0 0;
   margin-top: -6vw; /*for larger device, clip into above image*/
+}
+
+#img-circular-text {
+  height: 12.5%;
+  width: auto;
+  top: 2em;
+  left: calc(46%);
+  position: absolute;
+  animation: spin 30s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /*///////////////// FOOTER ///////////////////////*/
@@ -480,13 +534,20 @@ footer {
     width: 100%;
     margin-bottom: 1em;
   }
+
+  #img-circular-text {
+    height: 3%;
+    width: auto;
+    top: 2em;
+    left: 75%;
+    right: 0px;
+    position: absolute;
+    animation: spin 30s linear infinite;
+  }
 }
 
-
-
 @media screen and (min-width: 769px) {
-    .mobile-only {
-      display: none !important;
-    }
+  .mobile-only {
+    display: none !important;
   }
-  
+}
