@@ -70,6 +70,7 @@ body {
   align-items: center;
   flex-direction: row;
   justify-content: center;
+  flex-wrap: wrap;
 }
 /* .six {
   width: 50%;
@@ -331,6 +332,7 @@ body {
   justify-content: stretch;
   align-items: center;
   height: 6em;
+  margin-left: 1em;
 }
 
 .text-spec-comment {
@@ -351,10 +353,6 @@ body {
 
   transform: rotate(-90deg) translateX(-75%);
   transform-origin: top left;
-  top: 0%;
-  bottom: 0;
-  float: left;
-  width: auto;
 }
 
 .container-spec {
@@ -399,12 +397,15 @@ body {
 
 /*///////////////// SLIDESHOW ///////////////////////*/
 
-.slide-root:nth-child(1) {
-  display: none;
+
+/*///////////////// FLOATING IMAGES ///////////////////////*/
+
+#div-japanese {
+  height: 155px;
+  width: 100%;
+  background: url("../images/VECTOR.png") repeat 0 0;
+  margin-top: -6vw; /*for larger device, clip into above image*/
 }
-/* .slide-root:first-child {
-  display: block;
-} */
 
 /*///////////////// FOOTER ///////////////////////*/
 footer {
@@ -424,9 +425,10 @@ footer {
 
 /*///////////////// MOBILE-SPECIFIC STYLES ///////////////////////*/
 @media screen and (max-width: 769px) {
-    .desktop-only {
-      display: none !important;
-    }
+  .desktop-only {
+    display: none !important;
+  }
+
   .row {
     align-items: center;
     flex-direction: row;
@@ -472,6 +474,11 @@ footer {
   }
   .open_close_menu__container {
     display: block;
+  }
+
+  #img-japanese {
+    width: 100%;
+    margin-bottom: 1em;
   }
 }
 

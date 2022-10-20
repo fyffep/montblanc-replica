@@ -39,13 +39,35 @@
   <main>
 
     <div class="row">
-      <div class="seven columns">
-        <img src="images/photo 1.png" alt="Side view of Montblanc bike" class="img-slide" />
-        <img src="images/photo 1 - reversed.png" alt="Reversed side view of Montblanc bike" class="img-slide" />
+      <div class="nine columns">
+        <div class="row">
+          <div class="nine columns">
+            <img src="images/photo 1.png" alt="Side view of Montblanc bike" class="img-slide" />
+            <img src="images/photo 1 - reversed.png" alt="Reversed side view of Montblanc bike" class="img-slide" />
+          </div>
+          <img src="images/photo 2.png" alt="Front view of bike headlight" class="three columns" />
+          <img src="images/VECTOR.png" alt="Japanese text" id="img-japanese" class="mobile-only" />
+          <div class="twelve columns desktop-only" id="div-japanese" ></div>
+        </div>
+        <div class="row">
+          <div class="five columns row" id="row-progress-bar">
+            <button id="btn-plus-slide" class="column" onclick="plusSlides(-1)">« 1</button>
+            <div class="eight columns">
+              <div id="progress-bar-background">
+                <div id="progress-bar-fill"></div>
+              </div>
+            </div>
+            <button class="column" onclick="plusSlides(1)">10 »</button>
+          </div>
+          <div class="four columns" style="font-size: 14px;">
+              The bike comes in all black, with a relatively modern appeal. Chrome accents in just the right places make the bike stand out, while the black-on-black satin text on the bike's fork-guards helps highlight the company's branding without being too direct or obvious.
+          </div>
+          <img src="images/photo 3.png" alt="Wheel guard" class="three columns" />
+        </div>
       </div>
-      <img src="images/photo 2.png" alt="Front view of bike headlight" class="two columns" />
+      <!--Specs-->
       <div class="three columns">
-        <div class="row row-spec" style="border: 1px solid orange">
+        <div class="row row-spec">
           <span class="text-spec-rotated">TOP SPEED</span>
           <div class="container-spec">
             <p class="text-spec-comment">6-SPEED CONSTANT MESH</p>
@@ -61,25 +83,6 @@
             <p class="text-spec-comment">9.250 RPM</p>
           </div>
         </div>
-      </div>
-    </div>
-
-    
-    <div class="row">
-      <div class="four columns row" id="row-progress-bar">
-        <button id="btn-plus-slide" class="column" onclick="plusSlides(-1)">« 1</button>
-        <div class="eight columns">
-          <div id="progress-bar-background">
-            <div id="progress-bar-fill"></div>
-          </div>
-        </div>
-        <button class="column" onclick="plusSlides(1)">10 »</button>
-      </div>
-      <div class="three columns" style="font-size: 14px;">
-          The bike comes in all black, with a relatively modern appeal. Chrome accents in just the right places make the bike stand out, while the black-on-black satin text on the bike's fork-guards helps highlight the company's branding without being too direct or obvious.
-      </div>
-      <img src="images/photo 3.png" alt="Wheel guard" class="two columns" />
-      <div class="three columns">
         <div class="row row-spec">
           <span class="text-spec-rotated">TORQUE</span>
           <div class="container-spec">
@@ -97,63 +100,6 @@
           </div>
         </div>
       </div>
-    </div>
-    <button onclick="move()">Increase progress</button>
-
-
-
-
-    <!--Projects-->
-    <p class="h1-standard bold" id="projects">
-        Projects
-    </p>
-    <br class="spacer-xs"/>
-    <div class="row"><hr class="hr-20" /></div>
-    <br class="spacer-mini"/>
-
-    <!--Web Apps>
-    <p class="h3-standard bold" id="projects">
-      Web Apps
-    </p-->
-    <div class="row div-card">
-      <a class="row a-card shadowed" href="codebase-insights-vscode.html">
-        <img class="columns img-card"
-        src="images/heatmap/heatmap-logo-vscode.png" alt="Codebase Heatmap Extension">
-      </a>
-      <a class="row a-card shadowed" href="vita.html">
-        <img class="columns img-card"
-        src="images/vita/vitaLogoColor.png" alt="Vita">
-      </a>
-    </div>
-    
-    <div class="row div-card">
-      <a class="row a-card shadowed" href="game-maker.html">
-        <img class="columns img-card"
-        src="images/game-maker/game-maker-logo.png" alt="Game Maker Engine">
-      </a>
-      <a class="row a-card shadowed" href="supercontinent-lutil.html">
-        <img class="columns img-card"
-        src="images/lutil/SUPERCONTINENT_LÙTIL.png" alt="Browser RPG">
-      </a>
-    </div>
-
-    <br class="spacer-mini"/>
-    <p class="h3-standard bold" id="projects">
-      Android Apps
-    </p>
-    <div class="row div-card">
-      <a class="row a-card shadowed" href="restaurant-delivery-app.html">
-        <img class="columns img-card"
-        src="images/restaurant-delivery/restaurantDeliveryLogo.png" alt="Restaurant Delivery App">
-      </a>
-      <a class="row a-card shadowed" href="recipe-api-app.html">
-        <img class="columns img-card"
-        src="images/recipes/recipeLogo.png" alt="Recipe App">
-      </a>
-      <a class="row a-card shadowed" href="media-player-app.html">
-        <img class="columns img-card"
-        src="images/media-player/mediaPlayerLogo.png" alt="Game Maker Engine">
-      </a>
     </div>
 
     <br class="spacer-normal"/>
