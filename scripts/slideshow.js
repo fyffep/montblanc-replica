@@ -28,6 +28,7 @@ increaseProgress();
 function plusSlides(n) {
   slideIndex += n;
   showSlides(slideIndex);
+  restartAutoSlides(); //avoid skipping to next slide immediately if user wants to see some slide
 }
 
 function showSlides(n) {
@@ -35,6 +36,7 @@ function showSlides(n) {
   var slides = document.getElementsByClassName("img-slide");
   if (n > slides.length) {slideIndex = 1}
   if (n < 1) {slideIndex = slides.length}
+
   //Make all children of slides invisible
   for (i = 0; i < slides.length; i++) {
       slides[i].style.display = "none";
@@ -49,3 +51,14 @@ function showSlides(n) {
   increaseProgress();
 } 
 showSlides(slideIndex);
+
+
+//Automatically advance slides over time
+var autoslides;
+function restartAutoSlides() {
+  clearInterval(autoslides);
+  autoslides = setInterval(() => {
+    plusSlides(1);
+  }, 7000);
+}
+restartAutoSlides();
